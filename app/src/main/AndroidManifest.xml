@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="comp3350.flashy">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".presentation.Activity.QuizActivity"></activity>
+        <activity
+            android:name=".presentation.Activity.FlashyRegistrationActivity"
+            android:label="@string/title_activity_flashy_registration"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".presentation.Activity.ShowAllDecksActivity" />
+        <activity
+            android:name=".presentation.Activity.FlashCardListActivity"
+            android:label="title_activity_flash_card_list"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".presentation.Activity.CreateFlashCardActivity" />
+        <activity android:name=".presentation.Activity.ViewFlashCardActivity" />
+        <activity android:name=".presentation.DeckMenuActivity" />
+        <activity android:name=".presentation.Activity.NewDeckActivity" />
+        <activity android:name=".presentation.Activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

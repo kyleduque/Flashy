@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:paddingLeft="10dp"
+    android:paddingTop="20dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="20dp"
+    tools:context=".presentation.Activity.CreateFlashCardActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="825dp"
+        android:background="@color/colorLogInText"
+        app:cardBackgroundColor="@color/btn_deck"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="489dp"
+        android:layout_height="652dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/test"
+        android:contentDescription=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/createMenu"
+        app:layout_constraintVertical_bias="0.031" />
+
+    <TextView
+        android:id="@+id/instructionsMC"
+        android:layout_width="417dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text='"Wrong answer" will be replaced with a blank answer'
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/wrongMC3" />
+
+    <EditText
+        android:id="@+id/wrongMC3"
+        android:layout_width="425dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/wrongchoice"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Wrong Answer"
+        android:maxLength="20"
+        android:textSize="36sp"
+        android:typeface="normal"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/wrongMC2" />
+
+    <EditText
+        android:id="@+id/wrongMC2"
+        android:layout_width="425dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/wrongchoice"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Wrong Answer"
+        android:maxLength="20"
+        android:textSize="36sp"
+        android:typeface="normal"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/wrongMC1" />
+
+    <EditText
+        android:id="@+id/wrongMC1"
+        android:layout_width="425dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/wrongchoice"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Wrong Answer"
+        android:maxLength="20"
+        android:textSize="36sp"
+        android:typeface="normal"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/correctMC" />
+
+    <EditText
+        android:id="@+id/correctMC"
+        android:layout_width="425dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/flashcard_color"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Correct Answer"
+        android:maxLength="20"
+        android:textSize="36sp"
+        android:typeface="normal"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/mcQuestion" />
+
+    <EditText
+        android:id="@+id/mcQuestion"
+        android:layout_width="425dp"
+        android:layout_height="281dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/flashcard_color"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Multiple Choice Question"
+        android:maxLength="255"
+        android:textSize="36sp"
+        android:typeface="normal"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/body"
+        android:layout_width="433dp"
+        android:layout_height="501dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/flashcard_color"
+        android:fontFamily="sans-serif"
+        android:gravity="bottom|center|center_horizontal|top|center_vertical"
+        android:paddingBottom="350dp"
+        android:text="@string/example_of_front_side_of_a_flash_card"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="Example of front side of a flash card" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="433dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/flashcard_color"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal|center_vertical"
+        android:maxLength="20"
+        android:text="@string/title"
+        android:textSize="36sp"
+        android:typeface="normal"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        tools:text="Title" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="0dp"
+        android:scaleType="fitXY"
+        android:theme="@style/MyFloatingCancelButton"
+        app:backgroundTint="@android:color/holo_red_light"
+        app:borderWidth="0dp"
+        app:fabCustomSize="@dimen/fab_test"
+        app:layout_constraintEnd_toStartOf="@+id/saveButton"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:rippleColor="@color/design_default_color_primary_dark"
+        app:srcCompat="@drawable/ic_close_black_24dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:focusable="true"
+
+        android:padding="0dp"
+        android:scaleType="fitXY"
+        app:backgroundTint="@android:color/holo_red_light"
+        app:borderWidth="0dp"
+        app:fabCustomSize="@dimen/fab_test"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.979"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/addcardiconselected" />
+
+    <Spinner
+        android:id="@+id/createMenu"
+        android:layout_width="632dp"
+        android:layout_height="83dp"
+        android:background="@color/test"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

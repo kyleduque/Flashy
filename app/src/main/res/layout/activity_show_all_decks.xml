@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    tools:context=".presentation.Activity.ShowAllDecksActivity">
+
+    <Button
+        android:id="@+id/startQuiz"
+        android:layout_width="139dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:drawable/btn_default"
+        android:backgroundTint="@color/test"
+        android:text="Quiz"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintStart_toEndOf="@+id/selectedDeck"
+        app:layout_constraintTop_toBottomOf="@+id/showAllDeckList" />
+
+    <Button
+        android:id="@+id/createDeck"
+        android:layout_width="148dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:drawable/btn_default"
+        android:backgroundTint="@color/test"
+        android:text="@string/New_Deck"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/selectedDeck"
+        app:layout_constraintHorizontal_bias="0.214"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showAllDeckList" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="78dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/userDeck"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/username_icon" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:foregroundGravity="center_horizontal"
+        android:padding="0dp"
+        android:scaleType="fitXY"
+        app:backgroundTint="@android:color/holo_red_light"
+        app:borderWidth="0dp"
+        app:fabCustomSize="@dimen/deck_fab"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayout"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="@+id/frameLayout"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout"
+        app:layout_constraintVertical_bias="0.419"
+        app:srcCompat="@drawable/ic_power_settings_new_white_24dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/deleteDeck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:clickable="true"
+        android:foregroundGravity="center_horizontal"
+        android:padding="0dp"
+        android:scaleType="fitXY"
+        app:backgroundTint="@android:color/holo_red_light"
+        app:borderWidth="0dp"
+        app:fabCustomSize="@dimen/deck_fab"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
+        app:layout_constraintEnd_toStartOf="@+id/Open"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toEndOf="@+id/Back"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout"
+        app:layout_constraintVertical_bias="0.485"
+        app:srcCompat="@drawable/ic_delete_forever_white_24dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/Open"
+        android:layout_width="87dp"
+        android:layout_height="87dp"
+
+        android:clickable="true"
+        android:foregroundGravity="center_horizontal"
+        android:padding="0dp"
+        android:scaleType="fitXY"
+        app:backgroundTint="@android:color/holo_red_light"
+        app:borderWidth="0dp"
+        app:fabCustomSize="@dimen/deck_fab"
+        app:layout_constraintBottom_toBottomOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="@+id/frameLayout"
+        app:layout_constraintHorizontal_bias="0.889"
+        app:layout_constraintStart_toStartOf="@+id/frameLayout"
+        app:layout_constraintTop_toTopOf="@+id/frameLayout"
+        app:layout_constraintVertical_bias="0.452"
+        app:srcCompat="@drawable/ic_edit_black_24dp" />
+
+
+    <TextView
+        android:id="@+id/userDeck"
+        android:layout_width="wrap_content"
+        android:layout_height="79dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/showAllDeckList"
+        android:layout_width="0dp"
+        android:layout_height="519dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="48dp"
+        android:background="@android:color/background_light"
+        android:clickable="false"
+        android:drawSelectorOnTop="false"
+        android:isScrollContainer="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userDeck"
+        app:layout_constraintVertical_bias="0.031" />
+
+    <TextView
+        android:id="@+id/selectedDeck"
+        android:layout_width="221dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:drawable/editbox_background_normal"
+        android:gravity="center"
+        android:textColorLink="@color/colorAccent"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showAllDeckList" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="548dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectedDeck"
+        app:layout_constraintVertical_bias="0.565">
+
+    </FrameLayout>
+</android.support.constraint.ConstraintLayout>

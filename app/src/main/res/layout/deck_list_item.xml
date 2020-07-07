@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/profileItem"
+    android:layout_width="match_parent"
+    android:layout_height="100dip"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/vertical_deck_margin"
+    android:paddingTop="8dip"
+    android:paddingRight="@dimen/vertical_deck_margin"
+    android:paddingBottom="8dip"
+    app:layout_constraintCircleRadius="20dp">
+
+    <ImageView
+        android:layout_width="72dip"
+        android:layout_height="72dip"
+        android:src="@drawable/decks_icon" />
+
+    <TextView
+        android:id="@+id/deck_list_item"
+        android:layout_width="499dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:gravity="center_vertical"
+        android:text="dfgh"
+        android:textSize="30sp" />
+
+</LinearLayout>
